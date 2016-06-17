@@ -5,23 +5,60 @@ import sys
 import csv
 import os
 import json
+import time
 import requests
 from sets import Set
 from xlsxwriter.workbook import Workbook
 from requests.auth import HTTPBasicAuth
-from TableIndex import UserIndex,PerPersonIndex,PerPersonalIndex,EmpEmploymentIndex,EmpJobIndex
+from TableIndex import UserIndex,PerPersonIndex,PerPersonalIndex,EmpEmploymentIndex,EmpJobIndex,PrefixMap,MaritalStatusMap,EmploymentTypeMap
+import httplib2
+from apiclient import discovery
+import oauth2client
+from oauth2client import client
+from oauth2client import tools
+import base64
+from email.mime.audio import MIMEAudio
+from email.mime.base import MIMEBase
+from email.mime.image import MIMEImage
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+import mimetypes
+from django.conf import settings
+
 ProductionTemplateFilePath = "ProductionTemplate.tsv"
 api_url = "https://api10preview.sapsf.com/odata/v2/"
-userName = "APIAdmin"
+userName = "SFADMIN"
 companyID = "C0017935023D"
-password = "flipkart@123"
+password = "SFADMIN123"
+datemode = ''
+DuplicateCheckIndex = ["Date of Birth*","Date of Joining*","Fathers Name*","FirstName*","LastName*"]
+
+
+SCOPES = 'https://www.googleapis.com/auth/gmail.send'
+CLIENT_SECRET_FILE = 'client_secret.json'
+APPLICATION_NAME = 'sfValidator'
+
+
+#ProductionTemplateFilePath = settings.ProductionTemplateFilePath
+#api_url = settings.api_url
+#userName = settings.userName
+#companyID =settings.companyID
+#password = settings.password
+
+#DuplicateCheckIndex = settings.DuplicateCheckIndex
+
+#SCOPES = settings.SCOPES
+#CLIENT_SECRET_FILE = settings.CLIENT_SECRET_FILE
+#APPLICATION_NAME = settings.APPLICATION_NAME
+
+
+
 datemode = ''
 class Node:
 	def __init__(self):
 		self.child = {}
 		self.code = "Invalid"
 
-DuplicateCheckIndex = ["Date of Birth*","Date of Joining*","Fathers Name*","FirstName*","LastName*"]
 
 def XlsxToTsv(FilePath):
 	reload(sys)
@@ -37,7 +74,7 @@ def XlsxToTsv(FilePath):
 	for rownum in xrange(sh.nrows):
         	wr.writerow(sh.row_values(rownum))
 	csvFile.close()
-#	os.remove(FilePath)
+	os.remove(FilePath)
 	return FilePathTsv+".tsv"
 
 def MasterFileTuples(FilePath):
@@ -58,7 +95,8 @@ def MasterFileTuples(FilePath):
 	return TupleArray
 	
 def EmployeeData(FilePath):
-	fileHandle = open(XlsxToTsv(FilePath),"rU")
+	TsvFileName = XlsxToTsv(FilePath)
+	fileHandle = open(TsvFileName,"rU")
 	ErrorReport = []
 	LevelTitle =  fileHandle.readline().split("\t")
 	LevelTitle = [level for level in LevelTitle]
@@ -81,7 +119,16 @@ def EmployeeData(FilePath):
 				if LevelTitle[i][-1] == "*":
 					ErrorReport.append("Required Field "+LevelTitle[i]+" Empty at " +str(idx+1)+" Row Number")
 			else:
+				if LevelTitle[i]=='Prefix*':
+					level[i] = PrefixMap[ level[i] ]
+				if LevelTitle[i]=='Marital Status*':
+                                        level[i] = MaritalStatusMap[ level[i] ]
+				if LevelTitle[i]=='Employment Type*':
+                                        level[i] = EmploymentTypeMap[ level[i] ]
+
+				
 				Temp[LevelTitle[i]] = level[i]
+					
 		DuplicateCheckerTuple = []
                 for i in DuplicateCheckIndex:
                         DuplicateCheckerTuple.append(Temp[i])
@@ -94,6 +141,7 @@ def EmployeeData(FilePath):
                         Output[LevelTitle[i]].append(Temp[LevelTitle[i]])
 		TotalRecord+=1
                 DuplicateChecker.add(DuplicateCheckerTuple)
+	os.remove(TsvFileName)
 	return (LevelTitle,Output,TotalRecord,ErrorReport)
 def GFDTstructure(filePath):
 	fileHandle = open(filePath,"ru")
@@ -125,6 +173,7 @@ def GFDTStructureVerifier(LevelTitle,root,Fieldid,Employees):
 				break
 			else:
 				curNode = curNode.child[  Employees[level+"*"][idx].lower()  ]
+				
 	return ErrorReport
 	
 def XlsxErrorReport(Errors,ReportName):
@@ -174,37 +223,50 @@ def sfInsert(FieldId,Employees,TotalEmployee):
 		for x in FieldId:
 			employee[x] = Employees[x][idx]
 		UserPayload={}
-#		userID = getNewUserID()
-		userID = "324234"
+		userID = getNewUserID()
 		UserEntityInsert(userID,employee)
-#		PerPersonInsert(userID,employee)
+		PerPersonInsert(userID,employee)
 #		EmpEmploymentInsert(userID,employee)
-#		EmpJobInsert(userID,employee)
-#		PerPersonalInsert(userID,employee)
-		sys.exit()
+		EmpJobInsert(userID,employee)
+		PerPersonalInsert(userID,employee)
+
+
+def getSFDate(date):
+	year,month,day,hour,minute,second =  xlrd.xldate_as_tuple(int(date),datemode)
+	py_date = datetime.datetime(year, month, day, hour, minute, second)
+	date = int((py_date-datetime.datetime(1970,1,1)).total_seconds())*1000
+	return "/Date("+str(date)+")/"
+
+
+def getDate(date):
+	year,month,day,hour,minute,second =  xlrd.xldate_as_tuple(int(date),datemode)
+        py_date = datetime.datetime(year, month, day, hour, minute, second)
+	return py_date
+
+	
 def UserEntityInsert(userID,employee):
     UserPayload = {}	
     for key,value in UserIndex.iteritems():
 	if "date" not in key.lower():
 	     UserPayload[value] = employee[key]
 	else:
-	     UserPayload[value] = xlrd.xldate_as_tuple(int(employee[key]),datemode)
-	     print UserPayload[value]
+	     UserPayload[value] = getSFDate(employee[key])
     UserPayload["status"] = "active"
     UserPayload["userId"] = userID
     UserPayload["username"] = userID
-#   UserPayload["hr"] = "User'9090'"
-#   UserPayload["manager"] = "User'9090'"
+    UserPayload["hr"] = "User('"+UserPayload["hr"]+"')"
+    UserPayload["manager"] = "User('"+UserPayload["manager"]+"')"
     Userauth = HTTPBasicAuth(userName+"@"+companyID,password)
     Meta = {}
-    Meta["uri"] ="User('"+userID+"')"
+    Meta["uri"] ="User(userId='"+userID+"')"
     UserPayload["__metadata"]=Meta
+    
+
     UserHeader = {}
     UserHeader["content-type"] ="application/json; charset=utf-8"
     UserHeader["accept"] = "application/json"
     r = requests.post(api_url+"upsert",auth = Userauth,headers = UserHeader,  data = json.dumps(UserPayload))
-    print r.text
-    sys.exit()
+ #   print r.text
 
 
 def PerPersonInsert(userID,employee):
@@ -213,7 +275,7 @@ def PerPersonInsert(userID,employee):
 	if "date" not in key.lower():
 	      PerPersonPayload[value] = employee[key]
 	else:
-	      PerPersonPayload[value] = employee[key]
+	      PerPersonPayload[value] = getSFDate(employee[key])
     PerPersonPayload["personIdExternal"] = userID
     PerPersonPayload["userId"] = userID
     Userauth = HTTPBasicAuth(userName+"@"+companyID,password)
@@ -224,7 +286,52 @@ def PerPersonInsert(userID,employee):
     PerPersonHeader["content-type"] ="application/json; charset=utf-8"
     PerPersonHeader["accept"] = "application/json"
     r = requests.post(api_url+"upsert",auth = Userauth,headers = PerPersonHeader,  data = json.dumps(PerPersonPayload))
-    print r        
+#    print r.text
+#    sys.exit()        
+
+def EmpEmploymentInsert(userID,employee):
+    EmpEmploymentPayload = {}	
+    for key,value in EmpEmploymentIndex.iteritems():
+	if "date" not in key.lower():
+	      EmpEmploymentPayload[value] = employee[key]
+	else:
+	      EmpEmploymentPayload[value] = getSFDate(employee[key])
+#    EmpEmploymentPayload["status"] = "active"
+    EmpEmploymentPayload["userId"] = userID
+#    EmpEmploymentPayload["username"] = userID
+    Userauth = HTTPBasicAuth(userName+"@"+companyID,password)
+    Meta = {}
+    Meta["uri"] ="EmpEmployment(personIdExternal='"+userID+"',userId='"+userID+"')"
+    EmpEmploymentPayload["__metadata"]=Meta
+    EmpEmploymentHeader = {}
+    EmpEmploymentHeader["content-type"] ="application/json; charset=utf-8"
+    EmpEmploymentHeader["accept"] = "application/json"
+    r = requests.post(api_url+"upsert",auth = Userauth,headers = EmpEmploymentHeader,  data = json.dumps(EmpEmploymentPayload))
+#    print r.text        			
+ #   sys.exit()		
+def EmpJobInsert(userID,employee):
+    EmpJobPayload = {}	
+    for key,value in EmpJobIndex.iteritems():
+	if "date" not in key.lower():
+	      EmpJobPayload[value] = employee[key]
+	else:
+	      EmpJobPayload[value] = getSFDate(employee[key])
+    EmpJobPayload["eventReason"] = "direct"
+    EmpJobPayload["jobTitle"] = "contract"
+    EmpJobPayload["payGrade"] = "contract"
+#    EmpJobPayload["countryOfCompany"]="1776"
+    EmpJobPayload["userId"] = userID
+    Userauth = HTTPBasicAuth(userName+"@"+companyID,password)
+    Meta = {}
+    Meta["uri"] ="EmpJob"
+    EmpJobPayload["__metadata"]=Meta
+    EmpJobHeader = {}
+    EmpJobHeader["content-type"] ="application/json; charset=utf-8"
+    EmpJobHeader["accept"] = "application/json"
+    r = requests.post(api_url+"upsert",auth = Userauth,headers = EmpJobHeader,  data = json.dumps(EmpJobPayload))
+#    print r.text
+#    sys.exit()
+
 
 def PerPersonalInsert(userID,employee):
     PerPersonalPayload = {}	
@@ -232,57 +339,137 @@ def PerPersonalInsert(userID,employee):
 	if "date" not in key.lower():
 	      PerPersonalPayload[value] = employee[key]
 	else:
-	      PerPersonalPayload[value] = employee[key]
+	      PerPersonalPayload[value] = getSFDate(employee[key])
     PerPersonalPayload["personIdExternal"] = userID
     Userauth = HTTPBasicAuth(userName+"@"+companyID,password)
     Meta = {}
-    Meta["uri"] ="PerPersonal('"+userID+"')"
+    Meta["uri"] ="PerPersonal(personIdExternal='"+userID+"',startDate=datetime'"+str(getDate(employee["Date of Joining*"]).isoformat())+"')"
     PerPersonalPayload["__metadata"]=Meta
     PerPersonalHeader = {}
     PerPersonalHeader["content-type"] ="application/json; charset=utf-8"
     PerPersonalHeader["accept"] = "application/json"
     r = requests.post(api_url+"upsert",auth = Userauth,headers = PerPersonalHeader,  data = json.dumps(PerPersonalPayload))
-    print r        			
+ #   print r.text
+ #   sys.exit()        			
 		
-def EmpEmploymentInsert(userID,employee):
-    EmpEmploymentPayload = {}	
-    for key,value in EmpEmploymentIndex.iteritems():
-	if "date" not in key.lower():
-	      EmpEmploymentPayload[value] = employee[key]
-	else:
-	      EmpEmploymentPayload[value] = employee[key]
-    EmpEmploymentPayload["status"] = "active"
-    EmpEmploymentPayload["userId"] = userID
-    EmpEmploymentPayload["username"] = userID
-    Userauth = HTTPBasicAuth(userName+"@"+companyID,password)
-    Meta = {}
-    Meta["uri"] ="EmpEmployment('"+userID+"')"
-    EmpEmploymentPayload["__metadata"]=Meta
-    EmpEmploymentHeader = {}
-    EmpEmploymentHeader["content-type"] ="application/json; charset=utf-8"
-    EmpEmploymentHeader["accept"] = "application/json"
-    r = requests.post(api_url+"upsert",auth = Userauth,headers = EmpEmploymentHeader,  data = json.dumps(EmpEmploymentPayload))
-    print r        			
+def get_credentials():
+    """Gets valid user credentials from storage.
 
-def EmpJobInsert(userID,employee):
-    EmpJobPayload = {}	
-    for key,value in EmpJobIndex.iteritems():
-	if "date" not in key.lower():
-	      EmpJobPayload[value] = employee[key]
-	else:
-	      EmpJobPayload[value] = employee[key]
-    EmpJobPayload["eventReason"] = "direct"
-    EmpJobPayload["jobTitle"] = "contract"
-    EmpJobPayload["payGrade"] = "contract"
-    Userauth = HTTPBasicAuth(userName+"@"+companyID,password)
-    Meta = {}
-    Meta["uri"] ="EmpJob('"+userID+"')"
-    EmpJobPayload["__metadata"]=Meta
-    EmpJobHeader = {}
-    EmpJobHeader["content-type"] ="application/json; charset=utf-8"
-    EmpJobHeader["accept"] = "application/json"
-    r = requests.post(api_url+"upsert",auth = Userauth,headers = EmpJobHeader,  data = json.dumps(EmpJobPayload))
-    print r
+    If nothing has been stored, or if the stored credentials are invalid,
+    the OAuth2 flow is completed to obtain the new credentials.
+
+    Returns:
+        Credentials, the obtained credential.
+    """
+    home_dir = os.path.expanduser('~')
+    credential_dir = os.path.join(home_dir, '.credentials')
+    if not os.path.exists(credential_dir):
+        os.makedirs(credential_dir)
+    credential_path = os.path.join(credential_dir,
+                                   'gmail-python-quickstart.json')
+
+    store = oauth2client.file.Storage(credential_path)
+    credentials = store.get()
+    if not credentials or credentials.invalid:
+        flow = client.flow_from_clientsecrets(CLIENT_SECRET_FILE, SCOPES)
+        flow.user_agent = APPLICATION_NAME
+        if flags:
+            credentials = tools.run_flow(flow, store, flags)
+        else: # Needed only for compatibility with Python 2.6
+            credentials = tools.run(flow, store)
+        print('Storing credentials to ' + credential_path)
+    return credentials	
+def CreateMessage(Subject,Message,FileName,To_email):
+  """Create a message for an email.
+
+  Args:
+    sender: Email address of the sender.
+    to: Email address of the receiver.
+    subject: The subject of the email message.
+    message_text: The text of the email message.
+
+  Returns:
+    An object containing a base64url encoded email object.
+  """
+  message = MIMEText(Message)
+  message['to'] = To_email
+  message['from'] = "me"
+  message['subject'] = Subject
+  return {'raw': base64.urlsafe_b64encode(message.as_string())}
+
+def CreateMessageWithAttachment(Subject,Message,FileName,emailID):
+  """Create a message for an email.
+
+  Args:
+    sender: Email address of the sender.
+    to: Email address of the receiver.
+    subject: The subject of the email message.
+    message_text: The text of the email message.
+    file_dir: The directory containing the file to be attached.
+    filename: The name of the file to be attached.
+
+  Returns:
+    An object containing a base64url encoded email object.
+  """
+  message = MIMEMultipart()
+  message['to'] = emailID
+  message['from'] = "me"
+  message['subject'] = Subject
+
+  msg = MIMEText(Message)
+  message.attach(msg)
+
+  path = FileName
+  content_type, encoding = mimetypes.guess_type(path)
+
+  if content_type is None or encoding is not None:
+    content_type = 'application/octet-stream'
+  main_type, sub_type = content_type.split('/', 1)
+  if main_type == 'text':
+    fp = open(path, 'rb')
+    msg = MIMEText(fp.read(), _subtype=sub_type)
+    fp.close()
+  elif main_type == 'image':
+    fp = open(path, 'rb')
+    msg = MIMEImage(fp.read(), _subtype=sub_type)
+    fp.close()
+  elif main_type == 'audio':
+    fp = open(path, 'rb')
+    msg = MIMEAudio(fp.read(), _subtype=sub_type)
+    fp.close()
+  else:
+    fp = open(path, 'rb')
+    msg = MIMEBase(main_type, sub_type)
+    msg.set_payload(fp.read())
+    fp.close()
+
+  msg.add_header('Content-Disposition', 'attachment', filename=FileName)
+  message.attach(msg)
+
+  return {'raw': base64.urlsafe_b64encode(message.as_string())}
+
+def SendMessage(Subject,Message,FileName,To_email):
+  """Send an email message.
+
+  Args:
+    service: Authorized Gmail API service instance.
+    user_id: User's email address. The special value "me"
+    can be used to indicate the authenticated user.
+    message: Message to be sent.
+
+  Returns:
+    Sent Message.
+
+  """
+  credentials = get_credentials()
+  http = credentials.authorize(httplib2.Http())
+  service = discovery.build('gmail', 'v1', http=http)
+  message = CreateMessageWithAttachment(Subject,Message,FileName,To_email)
+  
+  message = (service.users().messages().send(userId="me", body=message).execute())
+  print ('Message Id: %s' % message['id'])
+  return message
+
 
 def Check(filePath,emailId):
 	FieldId,Employees,TotalEmployee,ErrorReport = EmployeeData(filePath)
@@ -290,22 +477,19 @@ def Check(filePath,emailId):
 	ErrorReport += GFDTStructureVerifier(LevelTitle,root,FieldId,Employees)
 	if len(ErrorReport) == 0:
 		sfInsert(FieldId,Employees,TotalEmployee)
+		os.remove(filePath)
 		return 1
 
 	else:
 		FileName = XlsxErrorReport(ErrorReport,filePath)
 		Message = open("ErrorEmailBody.txt").read()
 		Subject = "Success Factor Upload File Error"
-		send_mail(Subject,Message,FileName,emailId)
-#		os.remove(filePath+".xlsx")
+		SendMessage(Subject,Message,FileName,emailId)
+		os.remove(FileName)
 		return 0
+		
 	
 	
 	
 
 	
-#Fieldid,Employees,TotalEmployee,ErrorReport = EmployeeData("testData.xlsx")
-#LevelTitle,root = GFDTstructure("ProductionTemplate.tsv")
-#Check("testData.xlsx","raj.jha@gmail.com")
-#MasterFileTuples("testData.xlsx")
-#print len(GFDTStructureVerifier(LevelTitle,root,Fieldid,Employees)),len(ErrorReport)

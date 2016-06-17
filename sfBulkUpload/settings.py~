@@ -124,8 +124,17 @@ STATICFILES_DIRS = [
 	os.path.join(BASE_DIR, "static"),
 ]
 
-PRODUCTION_TEMPLATE='ProductionTemplate.tsv'
-UPLOAD_TEMPLATE = 'uploadTemplate.xlsx'
+ProductionTemplateFilePath = "ProductionTemplate.tsv"
+api_url = "https://api10preview.sapsf.com/odata/v2/"
+userName = "SFADMIN"
+companyID = "C0017935023D"
+password = "SFADMIN123"
+datemode = ''
+DuplicateCheckIndex = ["Date of Birth*","Date of Joining*","Fathers Name*","FirstName*","LastName*"]
 
+
+SCOPES = 'https://www.googleapis.com/auth/gmail.send'
+CLIENT_SECRET_FILE = 'client_secret.json'
+APPLICATION_NAME = 'sfValidator'
 
 
