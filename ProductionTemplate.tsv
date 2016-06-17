@@ -1,0 +1,446 @@
+Group	Group ID	Function	Function ID	Department	Department ID	Team	Team ID	Cost Code	Cost Center
+Engineering	G04	Human Resources	F4010	Business Partner	D4031	Business Partner	T4084	6243	HRBP - CP Tech
+Ekart	G02	Operations	F2002	Fullfilment Center and Return Center	D2004	Fulfillment Center Ops	T2023	4261	FC - Inbound SCM
+Ekart	G02	Operations	F2002	Fullfilment Center and Return Center	D2004	Fullfilment Center and Return Center	T2015	4261	FC - Inbound SCM
+Ekart	G02	Operations	F2002	Fullfilment Center and Return Center	D2004	Inbound	T2016	4261	FC - Inbound SCM
+Ekart	G02	Operations	F2002	Fullfilment Center and Return Center	D2004	Outbound	T2017	4240	FC - Outbound SCM
+Ekart	G02	Operations	F2002	Fullfilment Center and Return Center	D2004	FC and RC - Continous Improvement	T2018	4240	FC - Outbound SCM
+Ekart	G02	Operations	F2002	Fullfilment Center and Return Center	D2004	Central	T2024	4260	FC - Management
+Ekart	G02	Operations	F2002	Fullfilment Center and Return Center	D2004	FC and RC - Central Ops Support	T2020	4260	FC - Management
+Ekart	G02	Operations	F2002	Fullfilment Center and Return Center	D2004	Ops Planning - Control Tower	T2019	4260	FC - Management
+Ekart	G02	Operations	F2002	Fullfilment Center and Return Center	D2004	Returns	T2021	4250	RC - Returns SCM
+Ekart	G02	Operations	F2002	Fullfilment Center and Return Center	D2004	Packaging Ops	T2022	4230	FC - Packaging SCM
+Ekart	G02	Operations	F2002	Mother Hub & Transport Center	D2005	Transport Ops	T2026	4440	Transport Operations
+Ekart	G02	Operations	F2002	Mother Hub & Transport Center	D2005	Ops Planning - Control Tower - Transport	T2037	4440	Transport Operations
+Ekart	G02	Operations	F2002	Mother Hub & Transport Center	D2005	Central Ops Support - Transport	T2035	4440	Transport Operations
+Ekart	G02	Operations	F2002	Mother Hub & Transport Center	D2005	Central Transport Ops	T2032	4440	Transport Operations
+Ekart	G02	Operations	F2002	Mother Hub & Transport Center	D2005	Surface Transport	T2029	4440	Transport Operations
+Ekart	G02	Operations	F2002	Mother Hub & Transport Center	D2005	Air Transport	T2028	4440	Transport Operations
+Ekart	G02	Operations	F2002	Mother Hub & Transport Center	D2005	Vendor Management	T2027	4440	Transport Operations
+Ekart	G02	Operations	F2002	Mother Hub & Transport Center	D2005	Ops Planning - Control Tower - MH	T2036	4435	MH operations
+Ekart	G02	Operations	F2002	Mother Hub & Transport Center	D2005	Central Ops Support - Mother Hub	T2034	4435	MH operations
+Ekart	G02	Operations	F2002	Mother Hub & Transport Center	D2005	MH and TC - Continous Improvement	T2033	4435	MH operations
+Ekart	G02	Operations	F2002	Mother Hub & Transport Center	D2005	Mother Hub Ops	T2031	4435	MH operations
+Ekart	G02	Operations	F2002	Mother Hub & Transport Center	D2005	Line Haul Admin	T2030	4435	MH operations
+Ekart	G02	Operations	F2002	Lean Academy	D2006	Lean Academy	T2038	4257	SCM Corp - Lean Academy
+Ekart	G02	Operations	F2002	Planning	D2007	Supply Planning - FC	T2040	4202	FC-Planning SCM
+Ekart	G02	Operations	F2002	Planning	D2007	Supply Planning - MH	T2041	4410	MH - Planning
+Ekart	G02	Operations	F2002	Planning	D2007	Supply Planning - First Mile	T2042	4411	First Mile-Planning
+Ekart	G02	Operations	F2002	Planning	D2007	Supply Planning - Last Mile	T2043	4425	Last Mile-Planning
+Ekart	G02	Operations	F2002	Planning	D2007	Control Tower	T2044	4412	E2E Planning
+Ekart	G02	Product	F2004	Last Mile	D2010	Core & Performance Engineering - Product	T2053	4430	Last Mile-Product
+Ekart	G02	Product	F2004	Last Mile	D2010	Strategic Business Initiatives - Product	T2054	4430	Last Mile-Product
+Ekart	G02	Product	F2004	Last Mile	D2010	Geo Intelligence & Mapping - Product	T2055	4430	Last Mile-Product
+Ekart	G02	Design	F2005	Central	D2027	Central	T2076	4254	SCM Corp Design
+Ekart	G02	Design	F2005	Design	D2017	Design	T2066	4254	SCM Corp Design
+Ekart	G02	Design	F2005	E2E Design	D2021	E2E Design	T2070	4254	SCM Corp Design
+Ekart	G02	Design	F2005	Network	D2023	Network	T2072	4254	SCM Corp Design
+Ekart	G02	Design	F2005	Automation	D2022	Automation	T2071	4254	SCM Corp Design
+Ekart	G02	Design	F2005	Automotive & Vehicle	D2025	Automotive & Vehicle	T2074	4254	SCM Corp Design
+Ekart	G02	Design	F2005	Packaging	D2024	Packaging	T2073	4254	SCM Corp Design
+Commerce Platform	G01	Marketplace and Catalogue	F1001	Marketplace	D1001	Product	T1130	4764	Marketplace - Product
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Analytics	D1012	Customer Support, Customer Experience, Growth and Retention	T1044	7137	Analytics - Customer Support, Customer Experience, Growth and Retention
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Analytics	D1012	Customer Experience	T1140	7137	Analytics - Customer Support, Customer Experience, Growth and Retention
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Customer Experience	D1009	Quality	T1035	4350	CS-Quality
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Customer Experience	D1009	Analytics	T1034	4350	CS-Quality
+Commerce Platform	G01	Marketplace and Catalogue	F1001	Marketplace	D1001	Seller Support Operations	T1134	4735	Seller experience
+Commerce Platform	G01	Marketplace and Catalogue	F1001	Analytics	D1033	Analytics	T1136	4747	4747
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Jeeves	D1034	Jeeves	T1138	1181	1181
+Commerce Platform	G01	Marketplace and Catalogue	F1001	Marketplace	D1001	Marketing, Training and Communication 	T1006	4710	Seller Marketing
+Commerce Platform	G01	Marketplace and Catalogue	F1001	Marketplace	D1001	Marketing, Training and Communication	T1131	4710	Seller Marketing
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Customer Experience	D1009	Product	T1033	1250	VoC
+Commerce Platform	G01	Marketplace and Catalogue	F1001	Marketplace	D1001	Lending and Sourcing	T1132	4722	Enablement
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Management	D1010	Management	T1042	4301	CS- Management
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Customer Experience	D1009	Customer Experience	T1137	4301	CS- Management
+Commerce Platform	G01	Marketplace and Catalogue	F1001	Marketplace	D1001	Seller Growth	T1133	4721	Activation
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Analytics	D1012	Decision Analytics & Sciences	T1046	7139	7139
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Fulfilment Service Engine	D1013	Management	T1141	7131	7131
+Planning	G05	Planning	F5001	Forecasting	D5002	Forecasting	T5002	2551	Forecasting
+Commerce Platform	G01	Marketplace and Catalogue	F1001	Marketplace	D1001	Process Excellence and Program Governance	T1135	4765	Process Excellence and Program Governance
+Commerce Platform	G01	Human Resources	F1006	Business Partner	D1030	Business Partner	T1124	6203	HRBP - CP Biz
+Planning	G05	Planning	F5001	Planning	D5001	Planning	T5001	2550	Planning
+Ekart	G02	Human Resources	F2014	Training	D2033	Large	T2113	4554	4554
+Ekart	G02	Human Resources	F2014	Human Resources	D2035	Human Resources	T2115	4556	4556
+Ekart	G02	Human Resources	F2014	COE	D2034	COE	T2114	4555	4555
+Commerce Platform	G01	Marketplace and Catalogue	F1001	Marketplace	D1001	Marketplace	T1001	4761	Marketplace
+Commerce Platform	G01	Marketplace and Catalogue	F1001	Retail and Private Label	D1002	Retail	T1002	4762	Retail
+Ekart	G02	Human Resources	F2014	Talent Acquisition	D2032	Central	T2108	4553	4553
+Ekart	G02	Human Resources	F2014	Business Partner	D2031	Large	T2098	4551	4551
+Commerce Platform	G01	Marketplace and Catalogue	F1001	Catalogue 	D1004	Catalogue 	T1011	4746	Catalogue
+Ekart	G02	Human Resources	F2014	Talent Acquisition	D2032	Large	T2105	4552	4552
+Commerce Platform	G01	Marketplace and Catalogue	F1001	Retail and Private Label	D1002	Pricing and Promotions	T1004	4763	Pricing and Promotions
+Planning	G05	Planning	F5001	Inventory Planning	D5006	Inventory Placement & Health	T5006	2553	Inventory Placement & Health
+Ekart	G02	Human Resources	F2014	Training	D2033	Fulfillment Center and Return Center	T2111	4205	SCM FC-HR
+Engineering	G04	Shared Technologies Group	F4007	F7 Labs	D4020	F7 Labs	T4064	1044	Engg- STG- F7 Labs
+Planning	G05	Planning	F5001	Sales and Operations Planning	D5005	S&OP & Control Tower	T5005	2530	SNOP
+Engineering	G04	Flipkart Data Group	F4006	Data Modelling	D4016	Data Modelling	T4054	1043	Engg- FDG- Data Modeling
+Engineering	G04	Flipkart Data Group	F4006	Data Platform	D4015	Data Products	T4052	1042	Engg- FDG- Data Platform
+Engineering	G04	Flipkart Data Group	F4006	Data Platform	D4015	Framework	T4053	1042	Engg- FDG- Data Platform
+Engineering	G04	Flipkart Data Group	F4006	Storage Platform	D4014	Storage Platform	T4051	1041	Engg- FDG- Storage Platform
+Engineering	G04	Marketplace and Catalogue	F4003	Trust and Safety	D4010	Trust and Safety	T4037	1040	Engg- MPC- Trust and Safety
+Corp	G07	Strategy Deployment	F7007	Strategy Deployment	D7008	Strategy Deployment	T7010	6262	6262
+Engineering	G04	Marketplace and Catalogue	F4003	Returns	D4009	Returns	T4036	1039	Engg- MPC- Returns
+Engineering	G04	Customer Shopping Experience	F4002	User Decision	D4004	Buying Aids	T4012	1038	Engg- CSE- User Decision
+Engineering	G04	Customer Shopping Experience	F4002	User Decision	D4004	Credit Modeling	T4013	1038	Engg- CSE- User Decision
+Ekart	G02	Quality	F2006	Last Mile, MH & First Mile	D2030	Quality Engg - Last Mile	T2092	4426	Last Mile-Quality 
+Planning	G05	Planning	F5001	Planning and Shaping Platform	D5007	Demand and Supply Planning Platform	T5007	2552	Planning and Shaping Platform
+Planning	G05	Planning	F5001	Planning and Shaping Platform	D5007	Shaping	T5008	2554	Shaping
+Ekart	G02	Security	F2009	Security	D2041	Security	T2134	4557	4557
+Ekart	G02	Quality	F2006	Quality	D2028	Quality	T2077	4550	4550
+Ekart	G02	Operations	F2002	Planning	D2007	Planning	T2039	4413	4413
+Ekart	G02	Operations	F2002	Mother Hub & Transport Center	D2005	Mother Hub & Transport Center	T2025	1155	1155
+Engineering	G04	Management	F4001	Management	D4001	Management	T4001	1037	CP+CTO - Tech Product Exec
+Engineering	G04	Customer Shopping Experience	F4002	User Growth, Acquisition	D4002	Consumer Apps	T4002	1014	CP - Consumer Apps
+Engineering	G04	Customer Shopping Experience	F4002	User Growth, Acquisition	D4002	Customer Engagement	T4003	1014	CP - Consumer Apps
+Engineering	G04	Customer Shopping Experience	F4002	User Growth, Acquisition	D4002	Command Center	T4007	1014	CP - Consumer Apps
+Engineering	G04	Customer Shopping Experience	F4002	User Growth, Acquisition	D4002	Services	T4006	1014	CP - Consumer Apps
+Engineering	G04	Customer Shopping Experience	F4002	User Growth, Acquisition	D4002	Performance Marketing	T4005	1014	CP - Consumer Apps
+Engineering	G04	Customer Shopping Experience	F4002	User Growth, Acquisition	D4002	Growth Hacking	T4004	1014	CP - Consumer Apps
+Engineering	G04	Customer Shopping Experience	F4002	User Intent	D4003	SQA	T4011	1010	CP - Discovery
+Engineering	G04	Customer Shopping Experience	F4002	User Intent	D4003	Search Relevance	T4010	1010	CP - Discovery
+Engineering	G04	Customer Shopping Experience	F4002	User Intent	D4003	Recommendations & Merchandizing	T4009	1010	CP - Discovery
+Engineering	G04	Customer Shopping Experience	F4002	User Intent	D4003	Search Infrastructure	T4008	1010	CP - Discovery
+Engineering	G04	Customer Shopping Experience	F4002	Order Management Experience	D4005	Cart	T4015	1020	CP - Transact
+Engineering	G04	Customer Shopping Experience	F4002	Order Management Experience	D4005	AE / Shield	T4014	1020	CP - Transact
+Engineering	G04	Customer Shopping Experience	F4002	Order Management Experience	D4005	Payments	T4019	1020	CP - Transact
+Engineering	G04	Customer Shopping Experience	F4002	Order Management Experience	D4005	OMS	T4018	1020	CP - Transact
+Engineering	G04	Customer Shopping Experience	F4002	Order Management Experience	D4005	CHORE	T4017	1020	CP - Transact
+Engineering	G04	Customer Shopping Experience	F4002	Order Management Experience	D4005	Check Out	T4016	1020	CP - Transact
+Engineering	G04	Customer Shopping Experience	F4002	Order Management Experience	D4005	UD POD	T4020	1020	CP - Transact
+Engineering	G04	Customer Shopping Experience	F4002	Order Management Experience	D4005	Wallet	T4021	1020	CP - Transact
+Engineering	G04	Marketplace and Catalogue	F4003	Retail and Private Label	D4006	Promotions	T4024	1013	CP - Demand Shaping
+Engineering	G04	Marketplace and Catalogue	F4003	Retail and Private Label	D4006	Retail	T4022	1013	CP - Demand Shaping
+Engineering	G04	Marketplace and Catalogue	F4003	Retail and Private Label	D4006	Pricing	T4023	1013	CP - Demand Shaping
+Engineering	G04	Marketplace and Catalogue	F4003	Product CatalogueManagement	D4008	Product Catalogue	T4034	1016	CP - IMS
+Engineering	G04	Marketplace and Catalogue	F4003	Product CatalogueManagement	D4008	Competitive Intelligence	T4035	1016	CP - IMS
+Engineering	G04	Fulfilment and Customer Support	F4004	Customer Service	D4011	User Interface	T4044	1011	CP - CS + Transact
+Engineering	G04	Fulfilment and Customer Support	F4004	Customer Service	D4011	Machine Serve	T4041	1011	CP - CS + Transact
+Engineering	G04	Fulfilment and Customer Support	F4004	Customer Service	D4011	IT	T4040	1011	CP - CS + Transact
+Engineering	G04	Fulfilment and Customer Support	F4004	Customer Service	D4011	Self Serve	T4043	1011	CP - CS + Transact
+Engineering	G04	Fulfilment and Customer Support	F4004	Customer Service	D4011	CX	T4042	1011	CP - CS + Transact
+Engineering	G04	Fulfilment and Customer Support	F4004	Customer Service	D4011	Infrastructure	T4039	1011	CP - CS + Transact
+Engineering	G04	Fulfilment and Customer Support	F4004	Customer Service	D4011	Agent Serve	T4038	1011	CP - CS + Transact
+Engineering	G04	Fulfilment and Customer Support	F4004	Fulfilment Service Ecosystem	D4012	Digital	T4049	2520	FSE - Orchestration Tech & Product
+Engineering	G04	Fulfilment and Customer Support	F4004	Fulfilment Service Ecosystem	D4012	Vendor Management Ecosystem	T4048	2520	FSE - Orchestration Tech & Product
+Engineering	G04	Fulfilment and Customer Support	F4004	Fulfilment Service Ecosystem	D4012	Network Management	T4045	2520	FSE - Orchestration Tech & Product
+Engineering	G04	Fulfilment and Customer Support	F4004	Fulfilment Service Ecosystem	D4012	Planning	T4047	2520	FSE - Orchestration Tech & Product
+Engineering	G04	Fulfilment and Customer Support	F4004	Fulfilment Service Ecosystem	D4012	Orchestration	T4046	2520	FSE - Orchestration Tech & Product
+Engineering	G04	Ads	F4005	Engineering	D4013	Engineering	T4050	3527	Adw - Tech Engineering
+Engineering	G04	Flipkart Data Group	F4006	User Insights	D4017	User Services	T4056	1015	CP - Users
+Engineering	G04	Flipkart Data Group	F4006	User Insights	D4017	User Insights	T4055	1015	CP - Users
+Engineering	G04	Shared Technologies Group	F4007	Cloud Platform	D4018	Compute Platform	T4060	1030	CTO - Infrastructure as a service
+Engineering	G04	Shared Technologies Group	F4007	Cloud Platform	D4018	Network Platform	T4061	1030	CTO - Infrastructure as a service
+Engineering	G04	Shared Technologies Group	F4007	Cloud Platform	D4018	App Platform	T4058	1030	CTO - Infrastructure as a service
+Engineering	G04	Shared Technologies Group	F4007	Cloud Platform	D4018	Cloud Infra	T4059	1030	CTO - Infrastructure as a service
+Engineering	G04	Shared Technologies Group	F4007	Cloud Platform	D4018	App Model	T4057	1030	CTO - Infrastructure as a service
+Engineering	G04	Shared Technologies Group	F4007	Cloud Platform	D4018	Data Center/Hardware	T4062	1033	Data Center
+Engineering	G04	Shared Technologies Group	F4007	Principal Architect	D4021	Principal Architect	T4065	1035	CTO - Principal Architects
+Engineering	G04	Shared Technologies Group	F4007	Data Science	D4022	Data Science	T4066	1036	CTO - Data Scientists
+Engineering	G04	Shared Technologies Group	F4007	Accounting	D4023	Accounting	T4067	1019	CP - Accounting
+Engineering	G04	Shared Technologies Group	F4007	Productivity	D4024	Productivity Engineering	T4069	1024	CP-Corp  Engineering
+Engineering	G04	Shared Technologies Group	F4007	Productivity	D4024	Corporate Engineering	T4068	1024	CP-Corp  Engineering
+Engineering	G04	Ekart	F4008	Central Platforms	D4025	Core Platform	T4071	4252	SCM CorpTech
+Engineering	G04	Ekart	F4008	Distribution	D4026	First Mile	T4072	1104	First Mile Tech
+Engineering	G04	Ekart	F4008	Distribution	D4026	Transport	T4073	1103	MH /Transport Tech
+Engineering	G04	Ekart	F4008	Distribution	D4026	Warehouse	T4074	1101	Tech - FC
+Engineering	G04	Ekart	F4008	Fquick	D4027	Fquick	T4075	1046	Engg- Ekart- Fquick
+Engineering	G04	Ekart	F4008	Last Mile	D4028	Strategic Business Initiatives	T4078	4420	Last Mile-Tech
+Engineering	G04	Ekart	F4008	Last Mile	D4028	Geo Intelligence and Mapping	T4077	4420	Last Mile-Tech
+Engineering	G04	Ekart	F4008	Last Mile	D4028	Core and Performance Engineering	T4076	4420	Last Mile-Tech
+Engineering	G04	Planning	F4009	Planning	D4029	Product Support	T4082	1045	Engg- Planning
+Engineering	G04	Planning	F4009	Planning	D4029	Shaping	T4081	1045	Engg- Planning
+Engineering	G04	Planning	F4009	Planning	D4029	Data Services	T4080	1045	Engg- Planning
+Engineering	G04	Planning	F4009	Planning	D4029	Planning Applications	T4079	1045	Engg- Planning
+Engineering	G04	Marketplace and Catalogue	F4003	Marketplace	D4007	Seller Standards and Reporting	T4032	1012	CP - Seller Platform
+Engineering	G04	Marketplace and Catalogue	F4003	Marketplace	D4007	Seller Support and Education	T4033	1012	CP - Seller Platform
+Engineering	G04	Marketplace and Catalogue	F4003	Marketplace	D4007	Seller CRM	T4028	1012	CP - Seller Platform
+Engineering	G04	Marketplace and Catalogue	F4003	Marketplace	D4007	Seller Inventory and Order Management	T4029	1012	CP - Seller Platform
+Engineering	G04	Marketplace and Catalogue	F4003	Marketplace	D4007	Seller Inventory and Order Management (FBF)	T4030	1012	CP - Seller Platform
+Engineering	G04	Marketplace and Catalogue	F4003	Marketplace	D4007	Seller Payments and Disputes	T4031	1012	CP - Seller Platform
+Engineering	G04	Marketplace and Catalogue	F4003	Marketplace	D4007	Desktop UI	T4025	1012	CP - Seller Platform
+Engineering	G04	Marketplace and Catalogue	F4003	Marketplace	D4007	Mobile App	T4026	1012	CP - Seller Platform
+Engineering	G04	Marketplace and Catalogue	F4003	Marketplace	D4007	Selection and Selling	T4027	1012	CP - Seller Platform
+Engineering	G04	Shared Technologies Group	F4007	Security	D4019	Security	T4063	1025	Security Engineering
+Engineering	G04	Shared Technologies Group	F4007	Productivity	D4024	IT	T4070	1018	CP - Corp IT
+Engineering	G04	Human Resources	F4010	Talent Acquisition	D4030	Talent Acquisition	T4083	6241	Talent Acquisition - CP Tech
+Commerce Platform	G01	Marketplace and Catalogue	F1001	Retail and Private Label	D1002	Private Label	T1003	5111	Private Label
+Commerce Platform	G01	Marketplace and Catalogue	F1001	Product Catalogue Management	D1005	Catalogue Operations	T1012	4742	Catalogue Ops Catalogue Central
+Commerce Platform	G01	Marketplace and Catalogue	F1001	Product Catalogue Management	D1005	Quality	T1013	4744	Others - Quality
+Commerce Platform	G01	Marketplace and Catalogue	F1001	Product Catalogue Management	D1005	Catalogue Central	T1014	4745	Catalogue Central
+Planning	G05	Planning	F5001	Capacity Planning	D5004	Supply & Network Planning	T5004	2515	FSE - Planning
+Commerce Platform	G01	Marketplace and Catalogue	F1001	Product Catalogue Management	D1005	Flipkart Photo Studio	T1015	4741	Flipkart Photo Studio
+Planning	G05	Planning	F5001	Demand Planning	D5003	Demand Planning	T5003	2420	CP - Planning
+Commerce Platform	G01	Marketplace and Catalogue	F1001	Returns	D1006	Returns	T1016	6870	Returns
+Ads	G03	Finance	F3008	Business Finance	D3015	Business Finance	T3018	6271	Biz Fin Ads BU
+Commerce Platform	G01	Marketplace and Catalogue	F1001	Returns	D1006	Product	T1017	4766	Returns - Product
+Ads	G03	Human Resources	F3009	Business Partner	D3014	Business Partner	T3017	3523	Adw - HRBP
+Commerce Platform	G01	Marketplace and Catalogue	F1001	Trust and Safety	D1007	Trust and Safety	T1018	4736	Seller quality
+Ads	G03	Human Resources	F3009	Talent Acquisition	D3013	Talent Acquisition	T3016	3524	HR Recruitment
+Commerce Platform	G01	Marketplace and Catalogue	F1001	Management	D1008	Management	T1019	4767	MPC - Management
+Ads	G03	Brand Ads	F3007	Demand Planing	D3011	Demand Planing	T3014	3493	Operations
+Ads	G03	Brand Ads	F3007	Operations Delivery	D3012	Operations Delivery	T3015	3493	Operations
+Ads	G03	Brand Ads	F3007	Brand Sales	D3010	Agency Ecosystem	T3013	3502	Ads - Brand 3P Sales
+Ads	G03	Brand Ads	F3007	Brand Sales	D3010	3P Sales	T3011	3502	Ads - Brand 3P Sales
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Customer Experience	D1009	Customer Ops-Voice Inbound	T1020	4320	CS - Inbound
+Ads	G03	Brand Ads	F3007	Brand Sales	D3010	Strategic Sales	T3012	3491	Direct Sales
+Ads	G03	Brand Ads	F3007	Brand Sales	D3010	1P Sales	T3010	3491	Direct Sales
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Customer Experience	D1009	Customer Ops-Non Voice large	T1021	4362	CS Large
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Customer Experience	D1009	Customer Ops-Voice Cash On Delivery	T1022	4361	Cash On Delivery
+Ads	G03	Product Listing Ads	F3006	Operations	D3009	Operations	T3009	3473	AGP - Operations
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Customer Experience	D1009	Customer Ops-Non Voice RMT	T1023	4357	Return Mgt
+Ads	G03	Product Listing Ads	F3006	Partner Eco System	D3008	Partner Eco System	T3008	3472	Indirect Sales
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Customer Experience	D1009	Customer Ops-Non Voice SM	T1024	4355	Returns Services Mgt
+Ads	G03	Product Listing Ads	F3006	Sales	D3007	Sales	T3007	3471	AGP - Direct Sales
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Customer Experience	D1009	Customer Ops-Non Voice Email	T1025	4330	Email
+Ads	G03	Analytics	F3005	Analytics	D3006	Analytics	T3006	6285	Ads Biz Analytics
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Customer Experience	D1009	Customer Ops-Non Voice Chat	T1026	4354	Chat
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Customer Experience	D1009	Customer Ops-Service Recovery	T1027	1213	Customer First - Inbound 
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Customer Experience	D1009	Customer Ops-Social Media	T1028	1221	Customer First- Social Media 
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Customer Experience	D1009	Customer Ops Design	T1029	4351	Process Excellence
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Customer Experience	D1009	Customer Ops-RCA Team	T1030	1220	Customer First-Others
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Customer Experience	D1009	Customer Ops- Planning team	T1031	4358	CS- Planning
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Customer Experience	D1009	Business Ops-Projects	T1037	4345	Service Strategy
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Customer Experience	D1009	Customer Ops- Project Holy Grail	T1032	4345	Service Strategy
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Customer Experience	D1009	Business Ops-KAPA	T1036	4345	Service Strategy
+Ads	G03	Product Marketing and Network	F3004	Network	D3005	Network	T3005	3476	Ads - Network
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Customer Experience	D1009	Training Delivery	T1040	4375	CS Training
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Customer Experience	D1009	Training Design	T1039	4375	CS Training
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Customer Experience	D1009	Training-Customer Communication	T1038	4375	CS Training
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Customer Experience	D1009	Training-KM and LMS	T1041	4375	CS Training
+Ads	G03	Product Marketing and Network	F3004	Product Marketing	D3004	Product Marketing	T3004	3533	Adw - Tech HR- COE
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Analytics	D1012	Fulfillment Services Ecosystem	T1045	7138	Analytics - Fulfillment Services Ecosystem
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Fulfilment Service Engine	D1013	Operations Management	T1047	7133	FSE - Operations Management
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Fulfilment Service Engine	D1013	Vendor and Network Management	T1048	7134	FSE - Vendor and Network Management
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Fulfilment Service Engine	D1013	FA - PM	T1049	7132	FA - PM
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Fulfilment Service Engine	D1013	Product Cutomer Experience	T1050	7135	FSE - Product Cutomer Experience
+Commerce Platform	G01	Fulfilment and Customer Support	F1002	Fulfilment Service Engine	D1013	Product Seller Experience	T1051	7136	FSE - Product Seller Experience
+Commerce Platform	G01	Category Design and Operations	F1003	Mobiles	D1014	Mobiles	T1052	3240	Mobile
+Ads	G03	Program Management	F3003	Program Management	D3003	Program Management	T3003	6191	Program Management- Ads
+Commerce Platform	G01	Category Design and Operations	F1003	Lifestyle	D1015	Lifestyle	T1053	3380	Lifestyle
+Ads	G03	Product	F3002	Product	D3002	Product	T3002	3526	Tech Product
+Commerce Platform	G01	Category Design and Operations	F1003	Lifestyle	D1015	Womens Clothing	T1054	3397	WomenClothing
+Ads	G03	Management	F3001	Management	D3001	Management	T3001	3520	Business Heads
+WSR	WSR	WSR	WSR	WSR	WSR	WSR	WSR	WSR	WSR
+Commerce Platform	G01	Category Design and Operations	F1003	Lifestyle	D1015	Kids	T1055	3382	Kid
+Ekart	G02	Finance	F2013	Business Finance	D2057	Business Finance	T2165	6274	Biz Fin Ekart
+Commerce Platform	G01	Category Design and Operations	F1003	Lifestyle	D1015	Mens Clothing and LFR	T1056	3395	MenClothing
+Ekart	G02	Central Maintenance	F2012	Maintenance Management (Strategy & Planning)	D2055	Preventive Maintenance	T2161	4266	SCM Centeral maintenance
+Ekart	G02	Central Maintenance	F2012	Procurement & Stores (AMC)	D2056	Mechanical	T2164	4266	SCM Centeral maintenance
+Ekart	G02	Central Maintenance	F2012	Maintenance Management (Strategy & Planning)	D2055	Planned Maintenace	T2160	4266	SCM Centeral maintenance
+Ekart	G02	Central Maintenance	F2012	Procurement & Stores (AMC)	D2056	Electrical	T2163	4266	SCM Centeral maintenance
+Ekart	G02	Central Maintenance	F2012	Maintenance Management (Strategy & Planning)	D2055	Breakdown Maintenance	T2162	4266	SCM Centeral maintenance
+Commerce Platform	G01	Category Design and Operations	F1003	Lifestyle	D1015	Footwear and Fitness	T1057	3381	Footwear
+Ekart	G02	Large	F2011	Service Operations	D2053	Service & Installation	T2158	5491	LA - Service & Installation
+Commerce Platform	G01	Category Design and Operations	F1003	Lifestyle	D1015	Fashion Accessories	T1058	3388	Accessories
+Commerce Platform	G01	Category Design and Operations	F1003	Lifestyle	D1015	Books	T1059	3301	Book
+Commerce Platform	G01	Category Design and Operations	F1003	Lifestyle	D1015	Planning, Ops and Category Marketing	T1060	3398	Lifestyle - Planning, Ops & Category Marketing
+Ekart	G02	Large	F2011	Operations Development	D2052	Quality	T2156	5497	Large OD
+Ekart	G02	Large	F2011	Operations Development	D2052	Operation Excellence	T2157	5497	Large OD
+Ekart	G02	Large	F2011	Operations Development	D2052	Design	T2155	5497	Large OD
+Commerce Platform	G01	Category Design and Operations	F1003	Lifestyle	D1015	Fashion Strategy	T1061	3399	Fashion Strategy
+Commerce Platform	G01	Category Design and Operations	F1003	Lifestyle	D1015	Fashion Content	T1062	3400	Fashion Content
+Commerce Platform	G01	Category Design and Operations	F1003	Large	D1016	Large	T1063	5460	LA  Large
+Commerce Platform	G01	Category Design and Operations	F1003	Large	D1016	TV	T1064	5410	LA - Television
+Commerce Platform	G01	Category Design and Operations	F1003	Large	D1016	Refrigerator	T1065	5450	LA - Refrigerator
+Commerce Platform	G01	Category Design and Operations	F1003	Large	D1016	AC, Microwave (Electrical Goods)	T1066	5430	AC & Microwave 
+Ekart	G02	Large	F2011	Central team	D2054	LA - Central team	T2159	5487	LA - Central team
+Ekart	G02	Large	F2011	Performance Management	D2051	Performance Management	T2154	5487	LA - Central team
+Commerce Platform	G01	Category Design and Operations	F1003	Large	D1016	Washing Machine	T1067	5440	Washing Machine 
+Commerce Platform	G01	Category Design and Operations	F1003	Large	D1016	Customer Experience 	T1068	5451	Large - Customer Experience
+Commerce Platform	G01	Category Design and Operations	F1003	Large	D1016	Category Marketing 	T1069	5452	Large - Category Marketing
+Commerce Platform	G01	Category Design and Operations	F1003	Electronics	D1017	Internet of Things	T1070	3241	Internet of Things
+Commerce Platform	G01	Category Design and Operations	F1003	Electronics	D1017	Laptop, Tablets & Peripherals	T1071	3200	Laptop
+Commerce Platform	G01	Category Design and Operations	F1003	Electronics	D1017	Consumer Electronics	T1072	3170	CE
+Ekart	G02	Large	F2011	Customer Experience	D2050	Customer Experience	T2153	5498	Large Training
+Commerce Platform	G01	Category Design and Operations	F1003	Electronics	D1017	Electronics	T1073	3150	Electronics
+Commerce Platform	G01	Category Design and Operations	F1003	Electronics	D1017	Mobile and IT Acessories (CCC Acc)	T1074	3151	CCCAcc
+Ekart	G02	Large	F2011	Last Mile Operations	D2049	3PL Transport	T2152	5485	3PL Transport
+Commerce Platform	G01	Category Design and Operations	F1003	Electronics	D1017	Small Appliances	T1075	3270	SHA&PHC
+Ekart	G02	Large	F2011	Last Mile Operations	D2049	Operations	T2150	5490	LA - Last Mile
+Ekart	G02	Large	F2011	Last Mile Operations	D2049	Support Central	T2151	5490	LA - Last Mile
+Commerce Platform	G01	Category Design and Operations	F1003	Electronics	D1017	Auto	T1076	3100	Auto
+Commerce Platform	G01	Category Design and Operations	F1003	Electronics	D1017	Category Marketing and Events	T1077	3281	Electronics - Category Marketing and Events
+Ekart	G02	Large	F2011	Distribution Centre Ops	D2048	Transport and Mother Hub	T2149	5496	LA - Transport and Mother Hub  
+Commerce Platform	G01	Category Design and Operations	F1003	Electronics	D1017	B2B Sales, Gift Cards	T1078	3282	Electronics - B2B Sales, Gift Cards
+Commerce Platform	G01	Category Design and Operations	F1003	Home and Furniture	D1018	Home and Furniture	T1079	3350	HomeAndFurniture
+Commerce Platform	G01	Category Design and Operations	F1003	Home and Furniture	D1018	Household	T1080	3375	HouseHold
+Commerce Platform	G01	Category Design and Operations	F1003	Home and Furniture	D1018	Home Improvement	T1081	3360	HomeImprovementTool
+Commerce Platform	G01	Category Design and Operations	F1003	Home and Furniture	D1018	Home Furnishings	T1082	3355	HomeFurnishing
+Commerce Platform	G01	Category Design and Operations	F1003	Home and Furniture	D1018	Home Decor	T1083	3351	HomeDecor
+Ekart	G02	Large	F2011	Distribution Centre Ops	D2048	3PL Distribution Centre	T2148	5486	3PL Distribution Center
+Commerce Platform	G01	Category Design and Operations	F1003	Home and Furniture	D1018	Furniture	T1084	3401	Furniture
+Commerce Platform	G01	Category Design and Operations	F1003	Home and Furniture	D1018	Planning and Ops Associate & Cat marketing	T1085	3376	Home - Planning and Ops & Cat marketing
+Commerce Platform	G01	Category Design and Operations	F1003	Marketing	D1019	Marketing	T1086	6510	Marketing
+Commerce Platform	G01	Category Design and Operations	F1003	Marketing	D1019	Social	T1087	6574	Marketing-Social
+Commerce Platform	G01	Category Design and Operations	F1003	Marketing	D1019	Content	T1088	6576	Content
+Commerce Platform	G01	Category Design and Operations	F1003	Marketing	D1019	Media Planning and Buying	T1089	6573	Marketing-Media Buying& Planning
+Commerce Platform	G01	Category Design and Operations	F1003	Marketing	D1019	Marketing Communication	T1090	6577	Marketing Communication
+Commerce Platform	G01	Category Design and Operations	F1003	Marketing	D1019	Product Marketing	T1091	6578	Product Marketing
+Ekart	G02	Sales & BD	F2010	Strategy	D2047	Strategy	T2143	6418	SCM - Sales & BD
+Ekart	G02	Sales & BD	F2010	Sales	D2046	Sales	T2142	6418	SCM - Sales & BD
+Ekart	G02	Sales & BD	F2010	Marketing	D2045	Marketing	T2141	6418	SCM - Sales & BD
+Ekart	G02	Sales & BD	F2010	Key Account Management	D2044	Key Account Management	T2140	6418	SCM - Sales & BD
+Commerce Platform	G01	Category Design and Operations	F1003	Insights & Analytics, Events & Bank Alliances	D1020	Insights & Analytics, Events & Bank Alliances	T1092	7101	Insights & Analytics, Events & Bank Alliances
+Ekart	G02	Security	F2009	FSS	D2043	FSS - First Mile	T2139	4445	First Mile FSS
+Ekart	G02	Security	F2009	FSS	D2043	FSS - MH/Transport	T2138	4439	MH/Transport FSS
+Commerce Platform	G01	Category Design and Operations	F1003	Insights & Analytics, Events & Bank Alliances	D1020	Insights	T1093	6675	6675
+Commerce Platform	G01	Category Design and Operations	F1003	Insights & Analytics, Events & Bank Alliances	D1020	Analytics	T1094	7102	Analytics
+Ekart	G02	Security	F2009	FSS	D2043	FSS - Last Mile	T2137	4424	Last Mile-FSS
+Commerce Platform	G01	Category Design and Operations	F1003	Insights & Analytics, Events & Bank Alliances	D1020	Events and Promotions; Bank Alliances and CRM	T1095	7103	Events and Promotions; Bank Alliances and CRM
+Ekart	G02	Security	F2009	FSS	D2043	FSS - FC	T2136	4206	FC-FSS
+Commerce Platform	G01	Category Design and Operations	F1003	Management	D1021	Management	T1096	3051	CDO Management
+Ekart	G02	Security	F2009	FPI	D2042	FPI	T2135	6141	SCM F&I - FSS & FPI
+Commerce Platform	G01	Customer Shopping Experience	F1004	Management	D1022	Management	T1097	7104	CSE Management
+Commerce Platform	G01	Customer Shopping Experience	F1004	User Intent	D1023	Search	T1100	7105	Search
+Commerce Platform	G01	Customer Shopping Experience	F1004	User Intent	D1023	Merchandising engine	T1098	7105	Search
+Commerce Platform	G01	Customer Shopping Experience	F1004	User Intent	D1023	Reco engine	T1099	7105	Search
+Ekart	G02	IT	F2008	IT	D2040	First Mile - IT	T2133	1154	IT - First Mile
+Commerce Platform	G01	Customer Shopping Experience	F1004	User Decision	D1024	Category Product Management	T1102	7106	Merchandising and Reco Engine
+Commerce Platform	G01	Customer Shopping Experience	F1004	User Decision	D1024	UGC & User Decision platform	T1105	7106	Merchandising and Reco Engine
+Commerce Platform	G01	Customer Shopping Experience	F1004	User Decision	D1024	Digital Product	T1104	7106	Merchandising and Reco Engine
+Commerce Platform	G01	Customer Shopping Experience	F1004	User Decision	D1024	B2C Giftcards	T1101	7106	Merchandising and Reco Engine
+Commerce Platform	G01	Customer Shopping Experience	F1004	User Decision	D1024	Consumer Finance & risk Modelling	T1103	7106	Merchandising and Reco Engine
+Ekart	G02	IT	F2008	IT	D2040	IT Infra	T2132	6416	SCM Corp IT
+Commerce Platform	G01	Customer Shopping Experience	F1004	CSE Analytics	D1025	Product Analytics	T1107	7107	Product, Growth, Marketing Analytics
+Commerce Platform	G01	Customer Shopping Experience	F1004	CSE Analytics	D1025	Growth andMarketing Analytics	T1106	7107	Product, Growth, Marketing Analytics
+Commerce Platform	G01	Customer Shopping Experience	F1004	User Growth, Acquisition	D1026	Consumer Apps	T1108	7108	Emerging Initiatives
+Ekart	G02	Large	F2011	Distribution Centre Ops	D2048	Inventory	T2146	5480	LA - Distribution Centre
+Ekart	G02	IT	F2008	IT	D2040	Large - IT	T2131	5480	LA - Distribution Centre
+Ekart	G02	Large	F2011	Distribution Centre Ops	D2048	Returns	T2147	5480	LA - Distribution Centre
+Ekart	G02	Large	F2011	Distribution Centre Ops	D2048	Inbound	T2144	5480	LA - Distribution Centre
+Ekart	G02	Large	F2011	Distribution Centre Ops	D2048	Outbound	T2145	5480	LA - Distribution Centre
+Commerce Platform	G01	Customer Shopping Experience	F1004	User Growth, Acquisition	D1026	Customer Engagement	T1109	7109	B2C gift cards, Consumer Finance & Digital Product
+Commerce Platform	G01	Customer Shopping Experience	F1004	User Growth, Acquisition	D1026	Organic Growth (Growth Hacking)	T1110	7110	UGC and User Decision, OMS, Change Order
+Engineering	G04	Ekart	F4008	Distribution	D4026	Large - IT	T4086	6412	6412
+Commerce Platform	G01	Customer Shopping Experience	F1004	User Growth, Acquisition	D1026	Performance Marketing	T1111	7116	Wallet Support and Checkout flow
+Ekart	G02	IT	F2008	IT	D2040	Fulfillment Centre & Return Centre - IT	T2130	1151	IT - FC
+Commerce Platform	G01	Customer Shopping Experience	F1004	Design	D1027	Product Design	T1112	7111	Product Design
+Ekart	G02	IT	F2008	IT	D2040	Mother Hub & Transport Center Ops - IT	T2129	1153	IT - MH/Transport
+Commerce Platform	G01	Customer Shopping Experience	F1004	Design	D1027	Copy and Content	T1113	7112	Copy and Content
+Commerce Platform	G01	Customer Shopping Experience	F1004	Design	D1027	Creative Design	T1114	7113	Creative Design
+Commerce Platform	G01	Customer Shopping Experience	F1004	Design	D1027	User Research	T1115	7114	User Research
+Ekart	G02	IT	F2008	IT	D2040	Last Mile - IT	T2128	4422	Last Mile-IT Infra
+Commerce Platform	G01	Customer Shopping Experience	F1004	Order Management Experience	D1028	FK BAU payment integrations	T1119	7115	Payments and Fraud
+Commerce Platform	G01	Customer Shopping Experience	F1004	Order Management Experience	D1028	FK wallet support and externalizing wallet API	T1120	7115	Payments and Fraud
+Commerce Platform	G01	Customer Shopping Experience	F1004	Order Management Experience	D1028	Fraud	T1121	7115	Payments and Fraud
+Commerce Platform	G01	Customer Shopping Experience	F1004	Order Management Experience	D1028	OMS	T1122	7115	Payments and Fraud
+Commerce Platform	G01	Customer Shopping Experience	F1004	Order Management Experience	D1028	3D Printing	T1116	7115	Payments and Fraud
+Commerce Platform	G01	Customer Shopping Experience	F1004	Order Management Experience	D1028	Bank Alliances	T1117	7115	Payments and Fraud
+Commerce Platform	G01	Customer Shopping Experience	F1004	Order Management Experience	D1028	Checkout flow - Cart, checkout and Address verification etc.	T1118	7115	Payments and Fraud
+Commerce Platform	G01	Human Resources	F1006	Talent Acquisition	D1029	Talent Acquisition	T1123	6204	Talent Acquisition - CP Biz
+Commerce Platform	G01	Human Resources	F1006	Learning & Development	D1031	Learning & Development	T1125	6205	HR CP Non-Tech L&D
+Commerce Platform	G01	Finance	F1005	Business Finance	D1032	Business Finance	T1126	6270	Biz Fin CP
+Corp	G07	Executive Leadership	F7001	Executive Leadership	D7001	Executive Leadership	T7001	6051	S Team
+Corp	G07	Management	F7002	Management	D7002	Program Management	T7002	2301	Program Management Team
+Corp	G07	Legal	F7003	Legal	D7003	Legal	T7003	6702	Legal team-Corp
+Corp	G07	Mergers and Acquisition	F7004	Corporate Development	D7004	Corporate Development	T7004	6801	Corporate Development
+Corp	G07	Facilities and Infrastructure	F7005	Facilities and Infrastructure	D7005	Offices	T7005	6180	F&I - Offices
+Corp	G07	Facilities and Infrastructure	F7005	Facilities and Infrastructure	D7005	Projects	T7006	6183	F&I (Projects)
+Ekart	G02	Projects & FnI	F2007	Central	D2039	Design	T2126	6140	SCM F&I - Projects & Infra Design team
+Corp	G07	Facilities and Infrastructure	F7005	Security	D7006	Central	T7007	6151	FSS- Corp
+Corp	G07	Communications	F7006	Communications	D7007	Media	T7008	6252	Corporate Communication
+Corp	G07	Communications	F7006	Communications	D7007	Employees	T7009	6251	Internal Communication
+Ekart	G02	Projects & FnI	F2007	Central	D2039	Project Management	T2125	6111	SCM F&I Facility Management
+Ekart	G02	Projects & FnI	F2007	Central	D2039	Project & FnI - Central	T2127	6111	SCM F&I Facility Management
+Corp	G07	Finance	F7008	Commercial	D7009	Procurement	T7011	6287	Contollers Procurement
+Ekart	G02	Projects & FnI	F2007	Projects	D2037	Transportation - Projects	T2121	4438	MH/Transport F&I
+Ekart	G02	Projects & FnI	F2007	FnI	D2038	Transportation - FnI	T2124	4438	MH/Transport F&I
+Ekart	G02	Projects & FnI	F2007	Real Estate	D2036	Transportation - Real Estate	T2118	4438	MH/Transport F&I
+Corp	G07	Finance	F7008	Management Assurance	D7010	Management Assurance	T7012	6011	Internal Audit
+Corp	G07	Finance	F7008	Controller's Org-Accounting	D7011	Accounts Receivable	T7014	6320	Controllers Accounting
+Corp	G07	Finance	F7008	Controller's Org-Accounting	D7011	Accounts Payable	T7013	6320	Controllers Accounting
+Corp	G07	Finance	F7008	Controller's Org-Accounting	D7011	Treasury	T7016	6320	Controllers Accounting
+Corp	G07	Finance	F7008	Controller's Org-Accounting	D7011	General Ledger	T7015	6320	Controllers Accounting
+Corp	G07	Finance	F7008	Controller's Org-Accounting	D7011	Revenue Assurance	T7018	6320	Controllers Accounting
+Corp	G07	Finance	F7008	Controller's Org-Accounting	D7011	Process Controls Group	T7017	6320	Controllers Accounting
+Ekart	G02	Projects & FnI	F2007	FnI	D2038	Fulfillment Center - FnI	T2123	4201	FC-F&I
+Ekart	G02	Projects & FnI	F2007	Real Estate	D2036	Fulfillment Center - Real Estate	T2117	4201	FC-F&I
+Ekart	G02	Projects & FnI	F2007	Projects	D2037	Fulfillment Center - Projects	T2120	4201	FC-F&I
+Corp	G07	Finance	F7008	Corporate Taxation	D7012	Indirect Taxation	T7020	6288	Controller Taxation
+Corp	G07	Finance	F7008	Corporate Taxation	D7012	Direct Taxation	T7019	6288	Controller Taxation
+Corp	G07	Finance	F7008	Corporate Taxation	D7012	Tax Systems & Controls	T7022	6288	Controller Taxation
+Corp	G07	Finance	F7008	Corporate Taxation	D7012	Tax Dispute Management	T7021	6288	Controller Taxation
+Corp	G07	Finance	F7008	Business Finance	D7013	Business Finance	T7023	6273	Biz Fin Corp
+Corp	G07	Human Resources	F7009	Centre of Excellence	D7014	Performance Management	T7024	6253	COE - PMS
+Corp	G07	Human Resources	F7009	Centre of Excellence	D7014	Rewards	T7025	6212	HR Corp Rewards
+Ekart	G02	Projects & FnI	F2007	FnI	D2038	Last Mile - FnI	T2122	4428	Last Mile-F&I
+Ekart	G02	Projects & FnI	F2007	Projects	D2037	Last Mile - Projects	T2119	4428	Last Mile-F&I
+Ekart	G02	Projects & FnI	F2007	Real Estate	D2036	Last Mile - Real Estate	T2116	4428	Last Mile-F&I
+Corp	G07	Human Resources	F7009	Centre of Excellence	D7014	Organization Design	T7026	6217	HR Corp OD(Org Design)
+Corp	G07	Human Resources	F7009	Centre of Excellence	D7014	Talent - Leadership Hiring	T7027	6254	COE-Talent Leadership Hiring
+Corp	G07	Human Resources	F7009	Centre of Excellence	D7014	Talent - Talent Branding	T7028	6206	HR Corp  Branding
+Corp	G07	Human Resources	F7009	Centre of Excellence	D7014	Talent - Talent Management	T7029	6219	HR Talent Management
+Ekart	G02	Human Resources	F2014	Talent Acquisition	D2032	Product & Design	T2107	6247	Talent Acquisition - SCM
+Ekart	G02	Human Resources	F2014	Talent Acquisition	D2032	Tech	T2106	6247	Talent Acquisition - SCM
+Corp	G07	Human Resources	F7009	Core	D7015	HR Analytics	T7030	6256	HR Corp Analytics
+Ekart	G02	Human Resources	F2014	Business Partner	D2031	Product & Design	T2100	6245	HRBP - SCM
+Ekart	G02	Human Resources	F2014	Business Partner	D2031	Tech	T2099	6245	HRBP - SCM
+Corp	G07	Human Resources	F7009	Core	D7015	HR Systems	T7031	6218	HR Corp Systems
+Corp	G07	Human Resources	F7009	Core	D7015	People Operations	T7032	6231	HR Corp Ops
+Corp	G07	Human Resources	F7009	Centre of Excellence	D7014	Talent - Leadership Development	T7033	6255	COE-Talent Leadership Dev.
+Corp	G07	Human Resources	F7009	Centre of Excellence	D7014	Talent - Campus Hiring	T7034	6211	Campus Relations
+Corp	G07	Human Resources	F7009	Talent Acquisition	D7016	Talent Acquisition	T7035	6214	HR Corp Talent Acquisition
+Corp	G07	Human Resources	F7009	Business Partner	D7017	Business Partner	T7036	6221	Corp HRBPs
+Corp	G07	Human Resources	F7009	Learning & Development	D7018	Learning & Development	T7037	6213	HR Corp L&D
+Ekart	G02	Human Resources	F2014	Talent Acquisition	D2032	Motherhub & Transport	T2104	4436	MH/Transport  HR
+Ekart	G02	Human Resources	F2014	Business Partner	D2031	Motherhub & Transport	T2097	4436	MH/Transport  HR
+Ekart	G02	Human Resources	F2014	Training	D2033	Motherhub & Transport	T2112	4436	MH/Transport  HR
+Ekart	G02	Management	F2001	Management	D2001	Management	T2001	4256	SCM Corp Management
+Ekart	G02	Human Resources	F2014	Talent Acquisition	D2032	Fulfillment Center and Return Center	T2103	4205	SCM FC-HR
+Ekart	G02	Human Resources	F2014	Business Partner	D2031	Fulfillment Center and Return Center	T2096	4205	SCM FC-HR
+Ekart	G02	Operations	F2002	Last Mile	D2002	Last Mile - Continous Improvement	T2007	4421	Last Mile-Ops
+Ekart	G02	Operations	F2002	Last Mile	D2002	Last Mile - Operations	T2003	4421	Last Mile-Ops
+Ekart	G02	Operations	F2002	Last Mile	D2002	Last Mile - Central Ops Support	T2004	4421	Last Mile-Ops
+Ekart	G02	Operations	F2002	Last Mile	D2002	Last Mile - Inventory Management	T2005	4421	Last Mile-Ops
+Ekart	G02	Operations	F2002	Last Mile	D2002	Last Mile - Resource Planning	T2006	4421	Last Mile-Ops
+Ekart	G02	Operations	F2002	Last Mile	D2002	Last Mile	T2002	4421	Last Mile-Ops
+Ekart	G02	Human Resources	F2014	Talent Acquisition	D2032	Last Mile	T2102	4429	Last Mile-HR
+Ekart	G02	Human Resources	F2014	Training	D2033	Last Mile	T2110	4429	Last Mile-HR
+Ekart	G02	Human Resources	F2014	Business Partner	D2031	Last Mile	T2095	4429	Last Mile-HR
+Ekart	G02	Operations	F2002	First Mile	D2003	First Mile	T2008	4441	First Mile operations
+Ekart	G02	Operations	F2002	First Mile	D2003	First Mile - Operations	T2009	4441	First Mile operations
+Ekart	G02	Operations	F2002	First Mile	D2003	First Mile - Central Ops Support	T2010	4441	First Mile operations
+Ekart	G02	Operations	F2002	First Mile	D2003	First Mile - Inventory Management	T2011	4441	First Mile operations
+Ekart	G02	Operations	F2002	First Mile	D2003	First Mile - Resource Planning	T2012	4441	First Mile operations
+Ekart	G02	Operations	F2002	First Mile	D2003	First Mile - Continous Improvement	T2014	4441	First Mile operations
+Ekart	G02	Human Resources	F2014	Talent Acquisition	D2032	First Mile	T2101	4442	First Mile HR
+Ekart	G02	Human Resources	F2014	Training	D2033	First Mile	T2109	4442	First Mile HR
+Ekart	G02	Human Resources	F2014	Business Partner	D2031	First Mile	T2094	4442	First Mile HR
+Ekart	G02	Operations	F2002	First Mile	D2003	First Mile - P & L	T2013	4105	Procurement Logistics
+Ekart	G02	Quality	F2006	Last Mile, MH & First Mile	D2030	Quality Inspection - Last Mile	T2091	4426	Last Mile-Quality 
+Ekart	G02	Quality	F2006	Last Mile, MH & First Mile	D2030	Quality Assurance - Last Mile	T2090	4426	Last Mile-Quality 
+Ekart	G02	Quality	F2006	Last Mile, MH & First Mile	D2030	Quality ISO - Last Mile	T2093	4426	Last Mile-Quality 
+Ekart	G02	Quality	F2006	Last Mile, MH & First Mile	D2030	Quality ISO - First Mile	T2089	4416	First Mile-Quality 
+Ekart	G02	Quality	F2006	Last Mile, MH & First Mile	D2030	Quality Inspection - First Mile	T2087	4416	First Mile-Quality 
+Ekart	G02	Quality	F2006	Last Mile, MH & First Mile	D2030	Quality Engg - First Mile	T2088	4416	First Mile-Quality 
+Ekart	G02	Quality	F2006	Last Mile, MH & First Mile	D2030	Quality Assurance - First Mile	T2086	4416	First Mile-Quality 
+Ekart	G02	Quality	F2006	Last Mile, MH & First Mile	D2030	Quality ISO - MH	T2085	4415	MH - Quality 
+Ekart	G02	Quality	F2006	Last Mile, MH & First Mile	D2030	Quality Inspection - MH	T2083	4415	MH - Quality 
+Ekart	G02	Quality	F2006	Last Mile, MH & First Mile	D2030	Quality Engg - MH	T2084	4415	MH - Quality 
+Ekart	G02	Quality	F2006	Last Mile, MH & First Mile	D2030	Quality Assurance - MH	T2082	4415	MH - Quality 
+Ekart	G02	Quality	F2006	FC	D2029	Quality Assurance - FC	T2078	4204	FC-Quality
+Ekart	G02	Quality	F2006	FC	D2029	Quality Engg - FC	T2080	4204	FC-Quality
+Ekart	G02	Quality	F2006	FC	D2029	Quality Inspection - FC	T2079	4204	FC-Quality
+Ekart	G02	Quality	F2006	FC	D2029	Quality ISO - FC	T2081	4204	FC-Quality
+Ekart	G02	Design	F2005	Fulfillment Center and Return Center	D2026	Fulfillment Center and Return Center	T2075	4264	SCM Process- FC
+Ekart	G02	Design	F2005	Transport	D2020	Transport	T2069	4401	Transport/MH  Process
+Ekart	G02	Design	F2005	First Mile	D2019	First Mile	T2068	4402	First Mile Process
+Ekart	G02	Design	F2005	Last Mile	D2018	Last Mile	T2067	4423	Last Mile-Process
+Ekart	G02	Product	F2004	Distribution	D2011	Transport - Product	T2058	4434	MH /Transport Product
+Ekart	G02	Product	F2004	Distribution	D2011	Warehouse - Product	T2057	4211	FC & RC - Product
+Ekart	G02	Product	F2004	Distribution	D2011	First Mile - Product	T2056	4446	First Mile Product
+Ekart	G02	Product	F2004	Distribution	D2011	E2E Planning & Fulfillment - Product	T2059	4253	SCM Corp Product
+Ekart	G02	Product	F2004	Central Platforms	D2012	Solution Integration - Product	T2060	4253	SCM Corp Product
+Ekart	G02	Product	F2004	Central Platforms	D2012	Core Platform - Product	T2061	4253	SCM Corp Product
+Ekart	G02	Product	F2004	Service Design & Interface	D2013	Service Design & Interface	T2062	4253	SCM Corp Product
+Ekart	G02	Product	F2004	Planning & Orchestration	D2014	Planning & Orchestration	T2063	4253	SCM Corp Product
+Ekart	G02	Product	F2004	Innovation & Data	D2015	Innovation & Data	T2064	4253	SCM Corp Product
+Ekart	G02	Product	F2004	Central	D2016	Central	T2065	4253	SCM Corp Product
+Ekart	G02	Product	F2004	Product	D2009	Product	T2052	4253	SCM Corp Product
+Ekart	G02	Analytics	F2003	Analytics	D2008	Central	T2051	6284	Ekart Biz Analytics
+Ekart	G02	Analytics	F2003	Analytics	D2008	Fulfillment	T2049	6284	Ekart Biz Analytics
+Ekart	G02	Analytics	F2003	Analytics	D2008	Planning	T2050	6284	Ekart Biz Analytics
+Ekart	G02	Analytics	F2003	Analytics	D2008	Fulfillment Centre & Return Centre - Analytics	T2047	6284	Ekart Biz Analytics
+Ekart	G02	Analytics	F2003	Analytics	D2008	Large - Analytics	T2048	6284	Ekart Biz Analytics
+Ekart	G02	Analytics	F2003	Analytics	D2008	Last Mile - Analytics	T2045	6284	Ekart Biz Analytics
+Ekart	G02	Analytics	F2003	Analytics	D2008	Mother Hub & Transport Center Ops - Analytics	T2046	6284	Ekart Biz Analytics
