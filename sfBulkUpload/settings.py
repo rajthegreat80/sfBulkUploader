@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+TEST_RUNNER = 'testing.DatabaselessTestRunner'
 # Application definition
 
 INSTALLED_APPS = [
@@ -74,12 +74,6 @@ WSGI_APPLICATION = 'sfBulkUpload.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
 
 
 # Password validation
@@ -111,7 +105,7 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_L10N = True
-
+UPLOAD_TEMPLATE = 'uploadTemplate.xlsx'
 USE_TZ = True
 
 

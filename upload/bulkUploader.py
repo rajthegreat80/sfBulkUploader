@@ -1,4 +1,4 @@
-import openpyxl
+
 import datetime
 import xlrd
 import sys
@@ -24,7 +24,12 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import mimetypes
 from django.conf import settings
+import cloudstorage as gcs
 
+from google.appengine.api import app_identity
+from google.appengine.api import mail
+sender_email_id="raj.jha@flipkart.com"
+############################################################################################################################################
 ProductionTemplateFilePath = "ProductionTemplate.tsv"
 api_url = "https://api10preview.sapsf.com/odata/v2/"
 userName = "SFADMIN"
@@ -32,7 +37,7 @@ companyID = "C0017935023D"
 password = "SFADMIN123"
 datemode = ''
 DuplicateCheckIndex = ["Date of Birth*","Date of Joining*","Fathers Name*","FirstName*","LastName*"]
-
+############################################################################################################################################
 
 SCOPES = 'https://www.googleapis.com/auth/gmail.send'
 CLIENT_SECRET_FILE = 'client_secret.json'
@@ -63,18 +68,18 @@ class Node:
 def XlsxToTsv(FilePath):
 	reload(sys)
 	sys.setdefaultencoding('utf-8')
-	wb = xlrd.open_workbook(FilePath)
+	wb = xlrd.open_workbook(file_contents = gcs.open(FilePath).read())
 	sh = wb.sheet_by_index(0)
 	global datemode
 	datemode = wb.datemode
 	FilePathTsv= FilePath.split(".xlsx")[0]
-	csvFile = open(FilePathTsv+'.tsv', 'wu')
+	csvFile = gcs.open(FilePathTsv+'.tsv', 'w')
 	wr = csv.writer(csvFile,delimiter='\t')
 
 	for rownum in xrange(sh.nrows):
         	wr.writerow(sh.row_values(rownum))
 	csvFile.close()
-	os.remove(FilePath)
+	gcs.delete(FilePath)
 	return FilePathTsv+".tsv"
 
 def MasterFileTuples(FilePath):
@@ -96,7 +101,7 @@ def MasterFileTuples(FilePath):
 	
 def EmployeeData(FilePath):
 	TsvFileName = XlsxToTsv(FilePath)
-	fileHandle = open(TsvFileName,"rU")
+	fileHandle = gcs.open(TsvFileName,"r")
 	ErrorReport = []
 	LevelTitle =  fileHandle.readline().split("\t")
 	LevelTitle = [level for level in LevelTitle]
@@ -141,10 +146,10 @@ def EmployeeData(FilePath):
                         Output[LevelTitle[i]].append(Temp[LevelTitle[i]])
 		TotalRecord+=1
                 DuplicateChecker.add(DuplicateCheckerTuple)
-	os.remove(TsvFileName)
+	gcs.delete(TsvFileName)
 	return (LevelTitle,Output,TotalRecord,ErrorReport)
 def GFDTstructure(filePath):
-	fileHandle = open(filePath,"ru")
+	fileHandle = open(filePath,"r")
         LevelTitle = fileHandle.readline().split("\t")
 	LevelTitle = [LevelTitle[i] for i in xrange(0,len(LevelTitle),2)]
 
@@ -177,15 +182,16 @@ def GFDTStructureVerifier(LevelTitle,root,Fieldid,Employees):
 	return ErrorReport
 	
 def XlsxErrorReport(Errors,ReportName):
-	tsv_file = ReportName+"Error" + ".tsv"
+	tsv_file = "/sfbulkupload.appspot.com/"+ReportName+"Error" + ".tsv"
 	xlsx_file = ReportName+"Error" + ".xlsx"
 
 
-	tsvHandle = open(tsv_file,"w")
+	tsvHandle = gcs.open(tsv_file,"w")
 	tsvHandle.write("Error\n")
 	for error in Errors:
 		tsvHandle.write(error+"\n")
 	tsvHandle.close()
+	return tsv_file
 
 	
 	workbook = Workbook(xlsx_file)
@@ -471,21 +477,25 @@ def SendMessage(Subject,Message,FileName,To_email):
   return message
 
 
-def Check(filePath,emailId):
+def Check(filePath,emailID):
 	FieldId,Employees,TotalEmployee,ErrorReport = EmployeeData(filePath)
 	LevelTitle,root = GFDTstructure(ProductionTemplateFilePath)
 	ErrorReport += GFDTStructureVerifier(LevelTitle,root,FieldId,Employees)
 	if len(ErrorReport) == 0:
 		sfInsert(FieldId,Employees,TotalEmployee)
-		os.remove(filePath)
+		gcs.delete(filePath)
 		return 1
 
 	else:
 		FileName = XlsxErrorReport(ErrorReport,filePath)
 		Message = open("ErrorEmailBody.txt").read()
 		Subject = "Success Factor Upload File Error"
-		SendMessage(Subject,Message,FileName,emailId)
-		os.remove(FileName)
+		mail.send_mail(sender=sender_email_id.format(
+                app_identity.get_application_id()),
+                to=emailID,
+                subject=Subject,
+                body=Message,attachments=[(FileName, gcs.open(FileName).read())])
+		gcs.delete(FileName)
 		return 0
 		
 	

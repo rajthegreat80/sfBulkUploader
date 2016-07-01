@@ -24,14 +24,30 @@
 	<blockquote>
       <h4>SF Bulk Uploader: </h4>
       <h5>
+	    {% if error_message == '1' %}
+              <small class='red darken-3'>
+                Your File was not valid! Error Report has been sent to your mail
+                </small>
+            {% endif %}
             {% if error_message == '2' %}
               <small class='light-green accent-3'>
                 File was successfully uploaded to SF.
                 </small>
-            {% endif %}
-          {% if error_message == '1' %}
+            {% endif %}          
+	{% if error_message == '3' %}
               <small class='red darken-3'>
-                Your File was not valid! Error Report has been sent to your mail
+                Please enter xlsx file only.
+                </small>
+            {% endif %}
+
+	{% if error_message == '4' %}
+              <small class='red darken-3'>
+                Please enter both Excel file and Email ID both are required field.
+                </small>
+            {% endif %}
+	{% if error_message == '5' %}
+              <small class='red darken-3'>
+                Enter valid Email ID.
                 </small>
             {% endif %}
 
